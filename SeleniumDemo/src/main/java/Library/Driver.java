@@ -2,31 +2,45 @@ package Library;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Driver 
+public class Driver extends Baseconfigue
 { 
-	WebDriver driver=null;
+	WebDriver driver;
 
 
-	public void chrome() throws InterruptedException
+	public void setup(String browser) throws InterruptedException
 	{
-		
+		if(browser.equalsIgnoreCase("chrome"))	
+		{
 		WebDriverManager.chromedriver().setup();
 	    driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.hdfc.com/");
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//*[@id=\"HomepageModalVideo\"]/div/div/div[1]/button")).click();
+		
 		
 		}
+		else if(browser.equalsIgnoreCase("firefox"))
+		{
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+			driver.manage().window().maximize();
+		
+		}
+		
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		
+	}
+	public void url_link(String url)
+	{
+		driver.get(url);
+	}
 	
-	public void close()
+	public void closeall()
 	{
 		driver.quit();
 	}

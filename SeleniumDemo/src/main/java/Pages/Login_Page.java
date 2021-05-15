@@ -5,81 +5,111 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login_Page 
+import Library.BaseClass;
+import Library.Baseconfigue;
+
+public class Login_Page extends BaseClass
 {
-WebDriver driver;
+	WebDriver driver;
 
 
-public void homepage()
-{
-	PageFactory.initElements(driver, this);
-}
+	public void homepage()
+	{
+		PageFactory.initElements(driver, this);
+	}
 
-@FindBy(xpath="//*[@id=\"navbarDropdown\"]")
-private WebElement existingcustomer;
+	@FindBy(xpath ="//*[@id=\"HomepageModalVideo\"]/div/div/div[1]/button")
+	private WebElement buttonclosed;
+	
+	@FindBy(xpath="//*[@id=\"navbarDropdown\"]")
+	private WebElement existingcustomer;
 
-@FindBy(xpath="\"//*[@id=\"existing-customer-menu\"]/li/ul/li[1]/a\"")
-private WebElement homeloan;
+	@FindBy(xpath="\"//*[@id=\"existing-customer-menu\"]/li/ul/li[1]/a\"")
+	private WebElement homeloan;
 
-@FindBy(xpath="//*[@id=\"existing-customer-menu\"]/li/ul/li[1]/ul/li[2]/a")
-private WebElement customerlogin;
+	@FindBy(xpath="//*[@id=\"existing-customer-menu\"]/li/ul/li[1]/ul/li[2]/a")
+	private WebElement customerlogin;
 
-@FindBy(xpath="//*[@id=\"withlogin\"]")
-private WebElement userId;
+	@FindBy(xpath="//*[@id=\"withlogin\"]")
+	private WebElement userId;
 
-@FindBy(xpath="//*[@id=\"loginForm\"]/div/div[1]/div/input")
-private WebElement loanaccountNo; 
+	@FindBy(xpath="//*[@id=\"loginForm\"]/div/div[1]/div/input")
+	private WebElement loanaccountNo; 
 
-@FindBy(id="password")
-private WebElement password; 
+	@FindBy(id="password")
+	private WebElement passwords; 
 
-@FindBy(xpath="//*[@id=\"loginForm\"]/div/div[4]/button")
-private WebElement loginbutton; 
+	@FindBy(xpath="//*[@id=\"loginForm\"]/div/div[4]/button")
+	private WebElement loginbutton; 
 
-@FindBy(xpath="//*[@id=\"login_box\"]/span")
-private WebElement errormessage; 
-/** Invalid User Id Or Password. 
- * @return */
-/* use windowhandles and get title */
+	@FindBy(xpath="//*[@id=\"login_box\"]/span")
+	private WebElement errormessage; 
+	/** Invalid User Id Or Password. 
+	 * @return */
 
-public void clickexistingcustomer()
-{
-	existingcustomer.click();
+	public void closepopup()
+	{
 
-}
+		buttonclosed.click();
+	}
 
- public void clickhomeloan()
- {
-	 homeloan.click();
- }
- 
- public void clickcustomerlogin()
- {
-	 customerlogin.click();
- }
- 
- public void clickuserId()
- {
-	 userId.click();
- }
- 
- public void clickloanaccountNo()
- {
-	 loanaccountNo.sendKeys("dfaerfgre");
- }
- 
- 
- public void clickpassword()
- {
-	 password.sendKeys("2132454");
- }
- 
- public void clickloginbutton()
- {
-	 loginbutton.click();
- }
- public void validateerrormessage()
- {
-	 errormessage.click();
- }
+	public void clickexistingcustomer()
+	{
+		mouseactions(existingcustomer);
+		System.out.println(existingcustomer.getText());
+
+
+	}
+
+	public void clickhomeloan()
+	{
+		mouseactions(homeloan);
+		System.out.println(homeloan.getText());
+
+	}
+
+	public void clickcustomerlogin()
+	{
+		mouseactions(customerlogin);
+		System.out.println(customerlogin.getText());
+
+	}
+
+	public void clickuserId()
+	{
+		userId.click();
+	}
+
+	public void clickloanaccountNo(String username)
+	{
+		loanaccountNo.sendKeys(username);
+	}
+
+
+	public void clickpassword(String password)
+	{
+		passwords.sendKeys(password);
+	}
+
+	public void clickloginbutton()
+	{
+		loginbutton.click();
+	}
+	public String validateerrormessage()
+	{
+		String str= errormessage.getText();
+		return str;
+
+	}
+
+	public void close() {
+
+		driver.close();
+
+	}
+	public void gettitle()
+	{
+		String e = driver.getTitle();
+		System.out.println(e);
+	}
 }
