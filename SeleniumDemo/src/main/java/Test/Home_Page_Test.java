@@ -21,7 +21,7 @@ public class Home_Page_Test extends Baseconfigue{
 	Home_Page page = new Home_Page();
 
 	@BeforeMethod
-	@Parameters({"browser","url"})
+	 @Parameters({"browser","url"}) 
 
 	public void url(String browser,String url) throws InterruptedException
 	{
@@ -31,8 +31,7 @@ public class Home_Page_Test extends Baseconfigue{
 	}
 
 
-	@Test 
-
+	@Test(priority=1)
 	public void Scenario_1() throws InterruptedException 
 	{
 
@@ -50,7 +49,7 @@ public class Home_Page_Test extends Baseconfigue{
 
 	}
 
-	@Test
+	@Test(priority=2)
 	public void Scenario_2()
 	{
 		page.clickonimage();
@@ -60,7 +59,7 @@ public class Home_Page_Test extends Baseconfigue{
 	}
 
 
-	@Test 
+	@Test(priority=3)
 	public void Scenario_3()
 	{ 
 

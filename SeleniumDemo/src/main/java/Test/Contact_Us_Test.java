@@ -28,8 +28,8 @@ public class Contact_Us_Test
 	}
 
 	
-	@Test
-	public void contactus() throws InterruptedException
+    @Test(priority=1)
+	public void scenario_1() throws InterruptedException
 	{   
 	    c.closepopup();
 		c.move_contactus();
@@ -41,8 +41,8 @@ public class Contact_Us_Test
 		c.move_hdfcdeposite();
 	}
 	
-	@Test
-	public void writeUs()
+	@Test(priority=2)
+	public void scenario_2()
 	{
 		c.closepopup();
 		c.move_contactus();
@@ -63,7 +63,7 @@ public class Contact_Us_Test
 		c.checkbox();
 		c.submitbutton();
         c.error();
-        Assert.assertEquals("Please enter a valid Home Loan Account No.","sdv");
+        Assert.assertEquals("Please enter a valid Home Loan Account No.","vtdr");
 	
 	    
 	}

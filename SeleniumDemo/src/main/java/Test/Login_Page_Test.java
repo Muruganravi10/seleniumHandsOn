@@ -1,5 +1,7 @@
 package Test;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -10,24 +12,20 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Library.Driver;
+import Library.ExcelUtility;
+import Library.Utility;
 import Pages.Login_Page;
 
 public class Login_Page_Test {
 
-	@DataProvider(name = "test-data")
-	public Object[][] dataProvFunc(){
-		return new Object[][]{
-			{"murugan","25yydss"},{"moses","Bangalore"},{"usha","Chennai"}
-		};
-	}
 
-
+	String sheetName = "sheet1";
+	ExcelUtility excel;
 	Driver a = new Driver();
 	Login_Page b = new Login_Page();
 
 	@BeforeMethod
 	@Parameters({"browser","url"})
-
 	public void url(String browser,String url) throws InterruptedException
 	{
 
@@ -35,8 +33,14 @@ public class Login_Page_Test {
 		a.url_link(url);
 	}
 
-	@Test(dataProvider ="test-data")	
-	public void Scenario(String username,String password)
+	@DataProvider
+	public Object[][] getTestData(){
+		Object data[][] = excel.getTestData(sheetName);
+		return data;
+	}
+	  
+	@Test(priority=1, dataProvider="getTestData")
+	public void Scenario(String username,String password) throws IOException
 	{
 
 		b.closepopup();

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="3" ignored="0" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="41236" started-at="2021-05-15T14:06:59 IST" finished-at="2021-05-15T14:07:40 IST">
+  <suite name="Suite" duration-ms="61432" started-at="2021-05-15T18:21:30 IST" finished-at="2021-05-15T18:22:32 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="41236" started-at="2021-05-15T14:06:59 IST" finished-at="2021-05-15T14:07:40 IST">
+    <test name="Test" duration-ms="61432" started-at="2021-05-15T18:21:30 IST" finished-at="2021-05-15T18:22:32 IST">
       <class name="Test.Home_Page_Test">
-        <test-method status="PASS" signature="url(java.lang.String,java.lang.String)[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="url" is-config="true" duration-ms="15674" started-at="2021-05-15T14:06:59 IST" finished-at="2021-05-15T14:07:14 IST">
+        <test-method status="PASS" signature="url(java.lang.String,java.lang.String)[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="url" is-config="true" duration-ms="19937" started-at="2021-05-15T18:21:30 IST" finished-at="2021-05-15T18:21:50 IST">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- url -->
-        <test-method status="FAIL" signature="Scenario_1()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="Scenario_1" duration-ms="7" started-at="2021-05-15T14:07:14 IST" finished-at="2021-05-15T14:07:14 IST">
+        <test-method status="FAIL" signature="Scenario_1()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="Scenario_1" duration-ms="10" started-at="2021-05-15T18:21:50 IST" finished-at="2021-05-15T18:21:50 IST">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -63,11 +63,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Scenario_1 -->
-        <test-method status="PASS" signature="close_browser()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="close_browser" is-config="true" duration-ms="1570" started-at="2021-05-15T14:07:14 IST" finished-at="2021-05-15T14:07:16 IST">
+        <test-method status="PASS" signature="close_browser()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="close_browser" is-config="true" duration-ms="2572" started-at="2021-05-15T18:21:50 IST" finished-at="2021-05-15T18:21:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_browser -->
-        <test-method status="PASS" signature="url(java.lang.String,java.lang.String)[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="url" is-config="true" duration-ms="10121" started-at="2021-05-15T14:07:16 IST" finished-at="2021-05-15T14:07:26 IST">
+        <test-method status="PASS" signature="url(java.lang.String,java.lang.String)[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="url" is-config="true" duration-ms="17520" started-at="2021-05-15T18:21:53 IST" finished-at="2021-05-15T18:22:10 IST">
           <params>
             <param index="0">
               <value>
@@ -83,7 +83,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- url -->
-        <test-method status="FAIL" signature="Scenario_2()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="Scenario_2" duration-ms="2" started-at="2021-05-15T14:07:26 IST" finished-at="2021-05-15T14:07:26 IST">
+        <test-method status="FAIL" signature="Scenario_2()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="Scenario_2" duration-ms="3" started-at="2021-05-15T18:22:10 IST" finished-at="2021-05-15T18:22:11 IST">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -123,11 +123,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Scenario_2 -->
-        <test-method status="PASS" signature="close_browser()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="close_browser" is-config="true" duration-ms="1621" started-at="2021-05-15T14:07:26 IST" finished-at="2021-05-15T14:07:28 IST">
+        <test-method status="PASS" signature="close_browser()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="close_browser" is-config="true" duration-ms="2342" started-at="2021-05-15T18:22:11 IST" finished-at="2021-05-15T18:22:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_browser -->
-        <test-method status="PASS" signature="url(java.lang.String,java.lang.String)[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="url" is-config="true" duration-ms="10468" started-at="2021-05-15T14:07:28 IST" finished-at="2021-05-15T14:07:38 IST">
+        <test-method status="PASS" signature="url(java.lang.String,java.lang.String)[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="url" is-config="true" duration-ms="16733" started-at="2021-05-15T18:22:13 IST" finished-at="2021-05-15T18:22:30 IST">
           <params>
             <param index="0">
               <value>
@@ -143,7 +143,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- url -->
-        <test-method status="FAIL" signature="Scenario_3()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="Scenario_3" duration-ms="1" started-at="2021-05-15T14:07:38 IST" finished-at="2021-05-15T14:07:38 IST">
+        <test-method status="FAIL" signature="Scenario_3()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="Scenario_3" duration-ms="2" started-at="2021-05-15T18:22:30 IST" finished-at="2021-05-15T18:22:30 IST">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -183,7 +183,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Scenario_3 -->
-        <test-method status="PASS" signature="close_browser()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="close_browser" is-config="true" duration-ms="1727" started-at="2021-05-15T14:07:38 IST" finished-at="2021-05-15T14:07:40 IST">
+        <test-method status="PASS" signature="close_browser()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="close_browser" is-config="true" duration-ms="2154" started-at="2021-05-15T18:22:30 IST" finished-at="2021-05-15T18:22:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_browser -->

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="HDFC Test Suite">
   <test thread-count="5" name="Test">
   <parameter name = "browser" value="chrome"/> 
   <parameter name = "url" value="https:/www.hdfc.com/"/> 
     <classes>
-     <class name="Test.Home_Page_Test"/>
-     
+      <class name="Test.Contact_Us_Test"/>
     </classes>
   </test> <!-- Test -->
-</suite> <!-- Suite -->
+</suite> <!-- HDFC Test Suite -->

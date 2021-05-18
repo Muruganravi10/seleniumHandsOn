@@ -1,5 +1,7 @@
 package Pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,9 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import Library.BaseClass;
 import Library.Baseconfigue;
+import Library.ExcelUtility;
 
 public class Login_Page extends BaseClass
-{
+{   
+	ExcelUtility excel = new ExcelUtility();
 	WebDriver driver;
 
 
@@ -80,13 +84,13 @@ public class Login_Page extends BaseClass
 		userId.click();
 	}
 
-	public void clickloanaccountNo(String username)
+	public void clickloanaccountNo(String username) throws IOException
 	{
 		loanaccountNo.sendKeys(username);
 	}
 
 
-	public void clickpassword(String password)
+	public void clickpassword(String password) throws IOException
 	{
 		passwords.sendKeys(password);
 	}
@@ -112,4 +116,7 @@ public class Login_Page extends BaseClass
 		String e = driver.getTitle();
 		System.out.println(e);
 	}
+
+
+
 }

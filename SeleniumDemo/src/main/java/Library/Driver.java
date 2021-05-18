@@ -32,7 +32,7 @@ public class Driver extends Baseconfigue
 		}
 		
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		
 		
 	}
 	public void url_link(String url)
