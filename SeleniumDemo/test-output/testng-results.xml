@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" ignored="0" total="3" passed="0">
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="61432" started-at="2021-05-15T18:21:30 IST" finished-at="2021-05-15T18:22:32 IST">
+  <suite name="Suite" duration-ms="94" started-at="2021-05-25T16:42:24 IST" finished-at="2021-05-25T16:42:24 IST">
     <groups>
+      <group name="Regression">
+        <method signature="Contact_Us_Test.Hdfc_Write_to_Us()[pri:2, instance:Test.Contact_Us_Test@6f195bc3]" name="Hdfc_Write_to_Us" class="Test.Contact_Us_Test"/>
+      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="Contact_Us_Test.Hdfc_Contact_Us()[pri:1, instance:Test.Contact_Us_Test@6f195bc3]" name="Hdfc_Contact_Us" class="Test.Contact_Us_Test"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test name="Test" duration-ms="61432" started-at="2021-05-15T18:21:30 IST" finished-at="2021-05-15T18:22:32 IST">
-      <class name="Test.Home_Page_Test">
-        <test-method status="PASS" signature="url(java.lang.String,java.lang.String)[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="url" is-config="true" duration-ms="19937" started-at="2021-05-15T18:21:30 IST" finished-at="2021-05-15T18:21:50 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https:/www.hdfc.com/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- url -->
-        <test-method status="FAIL" signature="Scenario_1()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="Scenario_1" duration-ms="10" started-at="2021-05-15T18:21:50 IST" finished-at="2021-05-15T18:21:50 IST">
+    <test name="Test" duration-ms="94" started-at="2021-05-25T16:42:24 IST" finished-at="2021-05-25T16:42:24 IST">
+      <class name="Test.Contact_Us_Test">
+        <test-method status="FAIL" signature="Hdfc_Contact_Us()[pri:1, instance:Test.Contact_Us_Test@6f195bc3]" name="Hdfc_Contact_Us" duration-ms="15" started-at="2021-05-25T16:42:24 IST" finished-at="2021-05-25T16:42:24 IST">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at Pages.Home_Page.closepopup(Home_Page.java:54)
-at Test.Home_Page_Test.Scenario_1(Home_Page_Test.java:39)
+at Pages.Contact_Us.closepopup(Contact_Us.java:150)
+at Test.Contact_Us_Test.Hdfc_Contact_Us(Contact_Us_Test.java:34)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -62,33 +52,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Scenario_1 -->
-        <test-method status="PASS" signature="close_browser()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="close_browser" is-config="true" duration-ms="2572" started-at="2021-05-15T18:21:50 IST" finished-at="2021-05-15T18:21:53 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close_browser -->
-        <test-method status="PASS" signature="url(java.lang.String,java.lang.String)[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="url" is-config="true" duration-ms="17520" started-at="2021-05-15T18:21:53 IST" finished-at="2021-05-15T18:22:10 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https:/www.hdfc.com/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- url -->
-        <test-method status="FAIL" signature="Scenario_2()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="Scenario_2" duration-ms="3" started-at="2021-05-15T18:22:10 IST" finished-at="2021-05-15T18:22:11 IST">
+        </test-method> <!-- Hdfc_Contact_Us -->
+        <test-method status="FAIL" signature="Hdfc_Write_to_Us()[pri:2, instance:Test.Contact_Us_Test@6f195bc3]" name="Hdfc_Write_to_Us" duration-ms="2" started-at="2021-05-25T16:42:24 IST" finished-at="2021-05-25T16:42:24 IST">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at Pages.Home_Page.clickonimage(Home_Page.java:85)
-at Test.Home_Page_Test.Scenario_2(Home_Page_Test.java:56)
+at Pages.Contact_Us.closepopup(Contact_Us.java:150)
+at Test.Contact_Us_Test.Hdfc_Write_to_Us(Contact_Us_Test.java:53)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -122,72 +92,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Scenario_2 -->
-        <test-method status="PASS" signature="close_browser()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="close_browser" is-config="true" duration-ms="2342" started-at="2021-05-15T18:22:11 IST" finished-at="2021-05-15T18:22:13 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close_browser -->
-        <test-method status="PASS" signature="url(java.lang.String,java.lang.String)[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="url" is-config="true" duration-ms="16733" started-at="2021-05-15T18:22:13 IST" finished-at="2021-05-15T18:22:30 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https:/www.hdfc.com/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- url -->
-        <test-method status="FAIL" signature="Scenario_3()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="Scenario_3" duration-ms="2" started-at="2021-05-15T18:22:30 IST" finished-at="2021-05-15T18:22:30 IST">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at Pages.Home_Page.depositepage(Home_Page.java:91)
-at Test.Home_Page_Test.Scenario_3(Home_Page_Test.java:67)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Scenario_3 -->
-        <test-method status="PASS" signature="close_browser()[pri:0, instance:Test.Home_Page_Test@4b553d26]" name="close_browser" is-config="true" duration-ms="2154" started-at="2021-05-15T18:22:30 IST" finished-at="2021-05-15T18:22:32 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close_browser -->
-      </class> <!-- Test.Home_Page_Test -->
+        </test-method> <!-- Hdfc_Write_to_Us -->
+      </class> <!-- Test.Contact_Us_Test -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

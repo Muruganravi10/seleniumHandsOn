@@ -1,9 +1,6 @@
 package Pages;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -14,7 +11,7 @@ public class Home_Page extends BaseClass
 	WebDriver driver;
 
 
-	public void homepage()
+	public void homePage()
 	{
 		PageFactory.initElements(driver, this);
 	}
@@ -48,13 +45,13 @@ public class Home_Page extends BaseClass
 	private WebElement applybutton;
 
 
-	public void closepopup()
+	public void closePopUp()
 	{
 
 		buttonclosed.click();
 	}
 
-	public void clickloanproducts()
+	public void clickLoanProducts()
 	{
 
 		mouseactions(loanproductTab);
@@ -62,43 +59,44 @@ public class Home_Page extends BaseClass
 
 	}
 
-	public void clickhousingloan()
+	public String clickHousingLoan()
 	{   
 		mouseactions(housingloanTab);
-		System.out.println(housingloanTab.getText());
+		return housingloanTab.getText();
 
 	}
-	public void clickotherloan()
+	public String clickOtherLoan()
 	{  
 		mouseactions(otherloanTab);
-		System.out.println(otherloanTab.getText());
+		return otherloanTab.getText();
 
 	}
-	public void clicknonhousingloan()
+	public String clickNonHousingLoan()
 	{   
 		mouseactions(nonhousingloanTab);
-		System.out.println(nonhousingloanTab.getText());
+		return nonhousingloanTab.getText();
 
 	}
-	public void clickonimage()
+	public boolean clickOnImage()
 	{   
-		hdfcimage.click();
+
+	return hdfcimage.isDisplayed();
 
 
 	}
-	public void depositepage()
+	public void depositePage()
 	{
 		deposite.click();
 	}
 
-	public void checksentences()
+	public String checkSentences()
 	{
-		check.isDisplayed();
-		check.getText();
+		return check.getText();
+
 	}
-	public void apply()
+	public boolean apply()
 	{
-		applybutton.isEnabled();
-		applybutton.getText();
-	}
+		return applybutton.isEnabled();
+		
+	}	
 }

@@ -4,16 +4,18 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="https:/www.hdfc.com/"/>
+    <groups>
+      <run>
+        <include name="Group"/>
+      </run>
+    </groups>
     <classes>
-      <class name="Test.Home_Page_Test">
+      <class name="Test.Contact_Us_Test">
         <methods>
-          <include name="close_browser"/>
-          <include name="Scenario_2"/>
-          <include name="Scenario_3"/>
-          <include name="url"/>
-          <include name="Scenario_1"/>
+          <include name="Hdfc_Contact_Us"/>
+          <include name="Hdfc_Write_to_Us"/>
         </methods>
-      </class> <!-- Test.Home_Page_Test -->
+      </class> <!-- Test.Contact_Us_Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

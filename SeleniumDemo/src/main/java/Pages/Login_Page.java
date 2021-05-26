@@ -1,6 +1,8 @@
 package Pages;
 
-import java.io.IOException;
+
+import java.util.Iterator;
+import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +10,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Library.BaseClass;
-import Library.Baseconfigue;
 import Library.ExcelUtility;
 
 public class Login_Page extends BaseClass
@@ -24,7 +25,7 @@ public class Login_Page extends BaseClass
 
 	@FindBy(xpath ="//*[@id=\"HomepageModalVideo\"]/div/div/div[1]/button")
 	private WebElement buttonclosed;
-	
+
 	@FindBy(xpath="//*[@id=\"navbarDropdown\"]")
 	private WebElement existingcustomer;
 
@@ -51,13 +52,13 @@ public class Login_Page extends BaseClass
 	/** Invalid User Id Or Password. 
 	 * @return */
 
-	public void closepopup()
+	public void closePopUp()
 	{
 
 		buttonclosed.click();
 	}
 
-	public void clickexistingcustomer()
+	public void clickExistingCustomer()
 	{
 		mouseactions(existingcustomer);
 		System.out.println(existingcustomer.getText());
@@ -65,58 +66,43 @@ public class Login_Page extends BaseClass
 
 	}
 
-	public void clickhomeloan()
+	public void clickHomeLoan()
 	{
 		mouseactions(homeloan);
 		System.out.println(homeloan.getText());
 
 	}
 
-	public void clickcustomerlogin()
+	public String customerLogin(String username,String password)
 	{
 		mouseactions(customerlogin);
-		System.out.println(customerlogin.getText());
+		customerlogin.click();
+
+		String mainwindow = driver.getWindowHandle();
+		Set<String> s1 = driver.getWindowHandles();
+		Iterator<String> i1 =s1.iterator();
+		while(i1.hasNext())
+		{
+			String childwindow = i1.next();
+			if(!mainwindow.equalsIgnoreCase(childwindow))
+			{
+				driver.switchTo().window(childwindow);
+				userId.click();
+				loanaccountNo.sendKeys(username);
+				passwords.sendKeys(password);
+				loginbutton.click();
+				errormessage.getText();
+				driver.close();
+			}
+		}
+		driver.switchTo().window(mainwindow);
+		return errormessage.getText();
 
 	}
 
-	public void clickuserId()
+	public String gettitle()
 	{
-		userId.click();
-	}
-
-	public void clickloanaccountNo(String username) throws IOException
-	{
-		loanaccountNo.sendKeys(username);
-	}
-
-
-	public void clickpassword(String password) throws IOException
-	{
-		passwords.sendKeys(password);
-	}
-
-	public void clickloginbutton()
-	{
-		loginbutton.click();
-	}
-	public String validateerrormessage()
-	{
-		String str= errormessage.getText();
-		return str;
+		return driver.getTitle();
 
 	}
-
-	public void close() {
-
-		driver.close();
-
-	}
-	public void gettitle()
-	{
-		String e = driver.getTitle();
-		System.out.println(e);
-	}
-
-
-
 }

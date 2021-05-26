@@ -8,9 +8,9 @@ import java.util.Properties;
 
 public class Baseconfigue
 {   
-	public static Properties properties;
+	 public static Properties properties;
 	
-	public void data_from_propfile()
+	static void data_from_propfile()
 	{
 		
 		  File file = new File("/Selenium/src/main/resources/configuration/dataFile.properties");
